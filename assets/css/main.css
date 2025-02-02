@@ -1,0 +1,395 @@
+.header{
+padding: 10px 0px;
+z-index: 1000;
+  position: fixed;
+background-color: #ffff;
+width: 100%;
+margin-bottom: 300px;
+}
+/* position: fixed;
+top: 0; /* Ensure it stays at the top */
+/* z-index: 1000; /* Make sure it's on top of other elements */
+
+/* */ 
+.header ul {
+    display:flex;
+    gap: 35px; ;
+}
+.header nav a{
+    color: #0D0E43;
+    cursor: pointer;
+}
+/* هنا حلينا مشكلة انو الباتوون والانبوت مش بنفس الحجم الباتون كان ارتفاعها اكبر من الانبوت لماذا؟ */
+/* لانو عنا ال align_items:stretch */
+.search-bar form{
+
+border: 2px solid #E7E6EF;
+display: flex;
+width: 100%; /* Ensure it spans the full width of the header */
+box-sizing: border-box;
+
+}.search-bar form .search_btn{
+   background-color:var(--mainColor);
+   padding:10px;
+   cursor: pointer;
+}
+.search-bar input{
+    border: 0;
+    padding:10px 50px;
+}.search-bar .search_btn{
+border: 0;
+}
+ .header  .menu_svg{
+      display: none ;
+ } 
+
+
+ @media screen  and (max-width: 1200px) {
+   
+    .header nav {
+        display: none ;
+    }
+
+    .header .menu_svg{
+      display: block;
+    }
+   }
+   @media screen  and (max-width: 1200px) {
+  
+  .search-bar form{
+        display: none ;
+    }
+    .header .menu_svg{
+      display: block;
+    }
+   }
+
+   @media screen  and (max-width:562px) {
+
+    .header.row{
+      gap:100px
+    }
+   }    @media screen  and (max-width:448px) {
+
+    .header  .Logo{
+        display: none ;
+   } 
+   } 
+ nav a {
+    color: rgba(138, 143, 185, 1);
+ }
+
+   /* Heder End */
+/* Main Start */
+.hero{
+    padding: 80px 0px;
+    background-color: rgba(242, 240, 255, 1);
+    width: 100%;
+}
+.subTitle{
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+    color:var(--mainColor); ;
+}
+.subParagraph{
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+     color: rgba(138, 143, 185, 1);
+}.hero-content{
+display: flex;
+flex-grow: 1;
+max-width: 60%;
+
+
+}
+.text-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    animation: SlideInFromLeft 2s .5s;
+}
+@keyframes SlideInFromLeft{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+
+}
+.hero h1{
+    font-family: Josefin Sans;
+    font-size: 40px;
+    line-height: 70.39px;
+    letter-spacing: 0.01111em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+}
+.hero .shop-btn{
+    padding: 10px 40px;
+    text-align: center;
+    background-color:var(--mainColor);
+    border-radius:3px;
+    color: #ffff;
+    transition:background-color .5s;
+    cursor: pointer;
+
+
+}
+
+.hero .shop-btn:hover{
+    background-color: #170f14;
+}
+@keyframes SlideInFromRight{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+
+}
+.hero .hero_image{
+    width: 30%;
+    animation: SlideInFromRight 4s;
+}.hero .hero_image img{
+    width: 100%;
+ 
+}@keyframes rotateLamp{
+    0%{
+        transform:rotate(360deg);
+        opacity: 0;
+    }
+   30%{
+        opacity: .004;
+         }
+ 50%{
+   opacity: .2;
+    }
+    70%{
+        opacity: .5;
+         }
+    100%{
+        transform:rotate(0deg);
+        opacity:1;
+    }
+
+}
+.hero_lamp{
+    animation: rotateLamp 2s ;
+    width: 40%;
+position: relative;
+bottom:54px;
+z-index: 1;
+}
+.hero .hero_lamp img{
+    width: 100%;
+}
+@media screen  and (min-width:2201px) {
+
+    .hero h1{
+        font-family: Josefin Sans;
+        font-size: 53px;
+        line-height: 99.39px;
+        letter-spacing: 0.033em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        
+    }
+.subParagraph{
+        font-family: Lato;
+        font-size: 35px;
+        font-weight: 750;
+        line-height: 35px;
+   
+    }.subTitle{
+        font-family: Lato;
+        font-size:32px;
+        font-weight: 800;
+        line-height: 28px;
+  
+    }
+    .hero .shop-btn{
+        padding: 20px 80px;
+        text-align: center;
+        background-color:var(--mainColor);
+        border-radius:3px;
+        color: #ffff;
+        transition:background-color .5s;
+        cursor: pointer;
+        font-size:32px;
+        font-weight: 500;
+        line-height: 28px;
+    
+    }
+}
+@media screen  and (min-width: 1962px) {
+
+    .hero_lamp{
+        animation: rotateLamp 2s ;
+        width: 40%;
+    position: relative;
+    bottom:50px;
+    }
+}
+
+@media screen  and (min-width: 1524px) {
+
+    .hero_lamp{
+        animation: rotateLamp 2s ;
+        width: 40%;
+    position: relative;
+    bottom:45px;
+    }
+}@media screen  and (min-width: 1495px) {
+
+    .hero_lamp{
+        animation: rotateLamp 2s ;
+        width: 40%;
+    position: relative;
+    bottom:30px;
+    }
+}@media screen  and (min-width: 1489px) {
+
+    .hero_lamp{
+        animation: rotateLamp 2s ;
+        width: 40%;
+    position: relative;
+    bottom:20px;
+    }
+}@media screen  and (max-width: 1470px) {
+
+    .hero_lamp{
+        animation: rotateLamp 2s ;
+        width: 40%;
+    position: relative;
+    bottom:10px;
+    }
+}
+@media screen  and (max-width: 1247px) {
+
+    .hero_lamp{
+        animation: rotateLamp 2s ;
+        width: 80%;
+        hyphens: 20%;
+    position: relative;
+    bottom:10px;
+    }
+}@media screen  and (max-width:1031px) {
+.hero .row{
+    flex-direction: column;
+}
+.hero-content{
+    max-width:100%;
+}
+    .hero_lamp{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+}@media screen  and (max-width:663px) {
+ .hero_image{
+    opacity: 0;
+ }
+    }
+/* Main End */
+   /* Start Footer */
+   #footer{
+    background-color: #EEEFFB;
+    padding-top: 10px;
+    width: 100%;
+   }
+.left-bar form .signUpbtn{
+    background-color:var(--mainColor);
+   
+ }.footer_left_side .signUpbtn{
+    border: 0;
+    background-color:var(--mainColor);
+    color: #ffff;
+    cursor: pointer;
+
+    padding:10px;
+    }.Email input{
+        border: 0;
+        padding:10px 50px;
+    }.Email form{
+        display: flex;
+
+    }.footer_right_side{
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        /* gap:96px; */
+    }.footer_right_side .footer_Iteams{
+  display: flex;
+  flex-direction: column;
+   gap: 20px;
+        width:200px;
+    }.footer_left_side{
+        width:500px;
+    }.footer_right_side nav{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }#footer_down_side{
+        padding: 10px;
+        background-color: #E7E4F8;
+    }#footer_up_side{
+        padding-bottom: 10px;
+    }
+    @media screen  and (max-width:1310px) {
+   
+    
+        .footer_right_side {
+flex-wrap: wrap;
+gap: 40px;
+        }
+        #footer_up_side .row{
+           display: flex;
+            flex-direction: column;
+        }
+       .footer_left_side{
+        order: 1;
+        padding-top: 20px;
+       }
+
+       } 
+       @media screen  and (max-width:803px) {
+    
+        #footer_down_side .row {
+            display: flex;
+            flex-direction: column;
+        }
+  
+        
+       }  @media screen  and (max-width:562px) {
+       
+        .footer_left_side{
+      padding-left: 100px;
+        }
+    }  @media screen  and (max-width:803px) {
+    
+        .footer_left_side{
+          padding-left: 0px;
+          width: 200px;
+              }
+              .Email input{
+                border: 0;
+                padding:2px 15px;}
+       } 
+       /* End Footer */
